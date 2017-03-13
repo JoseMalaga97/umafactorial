@@ -1,0 +1,77 @@
+1.
+ls
+mkdir Software // Creamos un directorio para realizar la practica
+cd Software // Entramos en el directorio
+git config --global user.email 7ose97@gmail.com //configuramos el email local
+git config --global user.name JoseMalaga97 // configuramos el usuario local
+git config --global http.proxy http://proxy.wifi.uma.es:3128 // Usamos el proxy de la UMA
+git clone https://github.com/JoseMalaga97/umafactorial/ // clonamos el repositorio creado en la nube de GitHub
+cd umafactorial // Entramos en el repositorio
+2.
+git status // Nos permite comprobar que los cambios se han tenido en cuenta en el repositorio local
+git add factorial.java // Añadimos el fichero modificado al repositorio
+git status
+3.
+git commit -m "implementacion inicial" // Añadimos una etiqueta al nuevo estado del archivo modificado
+4.
+git status
+git add factorial.java
+git status
+git commit -m "refactorizacion"
+git push origin master // Subimos el respositorio a la nube de GitHub
+5.
+git checkout -b recursivo // Cambiamos a una nueva rama llamada recursivo para no modificar la rama master
+6.
+git status
+git add factorial.java 
+git status
+7.
+git commit -m "implementacion recursiva"
+8.
+git checkout master // cambiamos a la rama master
+9.
+git status
+git add factorial.java 
+10.
+git commit -m "correccion numeros negativos"
+git push origin master
+11.
+git checkout recursivo
+git add factorial.java 
+git commit -m "optimizacion"
+12.
+git checkout recursivo
+git push origin recursivo
+git checkout master
+git merge recursivo // Le decimos a GitHub que combine la rama actual (master) con la rama recursivo
+git push origin master
+13.
+git checkout -b refacIO // creamos una nueva rama llamada refacIO
+git add factorial.java 
+14.
+git commit -m "refactorizacion del metodo de entrada"
+15.
+git stash // Guardamos el repositorio actual en una pila
+git checkout master
+git add factorial.java
+16.
+git commit -m "cambio de long a BigInteger"
+git push origin master
+git checkout refacIO
+git stash pop // cargamos los datos de la pila de nuevo para seguir efectuando cambios
+git add factorial.java 
+git commit -m "refactorizacion del metodo de salida"
+17.
+git push origin refacIO
+git checkout master
+git merge refacIO
+18.
+git status
+git add factorial.java
+19.
+git commit -m "mezcla de rama refacIO"
+git push origin master
+20.
+touch comandos-git.txt // Creamos un archivo de texto donde introduciremos los comandos utilizados en la practica
+history // Visualizamos el historial de ordenes
+history > comandos-git.txt // Pegamos el historial de comandos en el archivo de texto creado
